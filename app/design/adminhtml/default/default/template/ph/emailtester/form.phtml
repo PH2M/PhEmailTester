@@ -1,0 +1,70 @@
+<?php
+/**
+ * PH2M_PhEmailTester
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   PhEmailTester
+ * @copyright  Copyright (c) 2018 PH2M SARL
+ * @author     PH2M SARL <contact@ph2m.com> : http://www.ph2m.com/
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @var $this PH2M_PhEmailTester_Block_Adminhtml_System_Email_Tester_From
+ */
+
+?>
+<div class="mail-preview">
+    <div class="banner">
+        <h1><?php echo $this->__('Mail preview'); ?></h1>
+        <div class="icon-container">
+            <a href="">
+                <img src="<?php echo $this->getSkinUrl('ph/email-tester/github-logo.svg') ?>" class="icon">
+            </a>
+        </div>
+    </div>
+    <form id="email-form">
+        <div class="step-1">
+            <div class="template-choose step">
+                <h3><?php echo $this->__('Step 1. Choose your template:') ?></h3>
+                <?php $_templates = $this->getTemplates(); ?>
+                <select name="template" id="template">
+                    <?php foreach ($_templates as $_template): ?>
+                        <option value='<?php echo http_build_query($_template['value']); ?>'><?php echo $_template['label'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+            <div class="store-choose step">
+                <h3><?php echo $this->__('Step 2. Choose your Store:') ?></h3>
+                <?php $_stores = $this->getStores(); ?>
+                <select name="store" id="store">
+                    <?php foreach ($_stores as $_store): ?>
+                        <option value="&store=<?php echo $_store->getId() ?>"><?php echo $_store->getName() ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+
+            <div class="step">
+                <h3><?php echo $this->__('Step 3. Generate the mail') ?></h3>
+                <button type="submit" id="generate" name="submit">Generate</button>
+            </div>
+        </div>
+        <div class="preview">
+            <img src="<?php echo $this->getSkinUrl('ph/email-tester/loader.svg') ?>" alt="" class="loader">
+            <div class="email">
+
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    jQuery(document).ready(function() {
+        if(jQuery('.adminhtml-system-email-tester-index').length) {
+            emailTester.init("<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/system_email_tester/rendertemplate/'); ?>");
+            jQuery('#email-form select').select2();
+        }
+    });
+</script>

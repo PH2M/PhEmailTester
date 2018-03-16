@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <models>
+        <customer>customer/customer</customer>
+        <order>sales/order</order>
+        <order_to_send>sales/order</order_to_send>
+        <quote>sales/quote</quote>
+        <creditmemo>sales/order_creditmemo</creditmemo>
+    </models>
+    <default_id>
+        <customer>1</customer>
+        <order>1</order>
+        <quote>1</quote>
+        <order_to_send>1</order_to_send>
+        <creditmemo>1</creditmemo>
+    </default_id>
+    <templates>
+        <!-- Product alert -->
+        <catalog_productalert_email_price_template>
+            <config>catalog/productalert/email_price_template</config>
+        </catalog_productalert_email_price_template>
+        <catalog_productalert_email_stock_template>
+            <config>catalog/productalert/email_stock_template</config>
+        </catalog_productalert_email_stock_template>
+        <catalog_productalert_cron_error_email_template>
+            <config>catalog/productalert_cron/error_email_template</config>
+        </catalog_productalert_cron_error_email_template>
+
+        <!-- Customer -->
+        <customer_create_account_email_template>
+            <config>customer/create_account/email_template</config>
+            <customer>1</customer>
+        </customer_create_account_email_template>
+        <customer_create_account_email_confirmation_template>
+            <config>customer/create_account/email_confirmation_template</config>
+            <customer>1</customer>
+        </customer_create_account_email_confirmation_template>
+        <customer_create_account_email_confirmed_template>
+            <config>customer/create_account/email_confirmed_template</config>
+            <customer>1</customer>
+        </customer_create_account_email_confirmed_template>
+        <customer_password_forgot_email_template>
+            <config>customer/password/forgot_email_template</config>
+            <customer>1</customer>
+        </customer_password_forgot_email_template>
+        <customer_password_remind_email_template>
+            <config>customer/password/remind_email_template</config>
+            <customer>1</customer>
+        </customer_password_remind_email_template>
+
+        <!-- Newsletter -->
+        <newsletter_subscription_confirm_email_template>
+            <config>newsletter/subscription/confirm_email_template</config>
+        </newsletter_subscription_confirm_email_template>
+        <newsletter_subscription_success_email_template>
+            <config>newsletter/subscription/success_email_template</config>
+        </newsletter_subscription_success_email_template>
+        <newsletter_subscription_un_email_template>
+            <config>newsletter/subscription/un_email_template</config>
+        </newsletter_subscription_un_email_template>
+
+        <!-- Credit memo -->
+        <sales_email_creditmemo_comment_guest_template>
+            <config>sales_email/creditmemo_comment/guest_template</config>
+            <order>1</order>
+            <creditmemo>1</creditmemo>
+        </sales_email_creditmemo_comment_guest_template>
+        <sales_email_creditmemo_comment_template>
+            <config>sales_email/creditmemo_comment/template</config>
+            <order>1</order>
+            <creditmemo>1</creditmemo>
+        </sales_email_creditmemo_comment_template>
+        <sales_email_creditmemo_guest_template>
+            <config>sales_email/creditmemo/guest_template</config>
+            <order>1</order>
+            <creditmemo>1</creditmemo>
+        </sales_email_creditmemo_guest_template>
+        <sales_email_creditmemo_template>
+            <config>sales_email/creditmemo/template</config>
+            <order>1</order>
+            <creditmemo>1</creditmemo>
+        </sales_email_creditmemo_template>
+
+        <!-- Order -->
+        <sales_email_order_comment_guest_template>
+            <config>sales_email/order_comment/guest_template</config>
+            <order>1</order>
+        </sales_email_order_comment_guest_template>
+        <sales_email_order_comment_template>
+            <config>sales_email/order_comment/template</config>
+            <order>1</order>
+        </sales_email_order_comment_template>
+        <sales_email_order_guest_template>
+            <config>sales_email/order/guest_template</config>
+            <order>1</order>
+        </sales_email_order_guest_template>
+        <sales_email_order_template>
+            <config>sales_email/order/template</config>
+            <order>1</order>
+        </sales_email_order_template>
+
+        <!-- Shipment -->
+        <sales_email_shipment_comment_guest_template>
+            <config>sales_email/shipment_comment/guest_template</config>
+            <order>1</order>
+            <shipment>1</shipment>
+        </sales_email_shipment_comment_guest_template>
+        <sales_email_shipment_comment_template>
+            <config>sales_email/shipment_comment/template</config>
+            <order>1</order>
+            <shipment>1</shipment>
+        </sales_email_shipment_comment_template>
+        <sales_email_shipment_guest_template>
+            <config>sales_email/shipment/guest_template</config>
+            <order>1</order>
+            <shipment>1</shipment>
+        </sales_email_shipment_guest_template>
+        <sales_email_shipment_template>
+            <config>sales_email/shipment/template</config>
+            <order>1</order>
+            <shipment>1</shipment>
+        </sales_email_shipment_template>
+
+        <!-- Invoice -->
+        <sales_email_invoice_comment_guest_template>
+            <config>sales_email/invoice_comment/guest_template</config>
+            <order>1</order>
+            <invoice>1</invoice>
+        </sales_email_invoice_comment_guest_template>
+        <sales_email_invoice_comment_template>
+            <config>sales_email/invoice_comment/template</config>
+            <order>1</order>
+            <invoice>1</invoice>
+        </sales_email_invoice_comment_template>
+        <sales_email_invoice_guest_template>
+            <config>sales_email/invoice/guest_template</config>
+            <order>1</order>
+            <invoice>1</invoice>
+        </sales_email_invoice_guest_template>
+        <sales_email_invoice_template>
+            <config>sales_email/invoice/template</config>
+            <order>1</order>
+            <invoice>1</invoice>
+        </sales_email_invoice_template>
+
+        <!-- Errors -->
+        <checkout_payment_failed_template>
+            <config>customer/create_account/email_template</config>
+            <order>1</order>
+        </checkout_payment_failed_template>
+        <currency_import_error_email_template>
+            <config>currency/import/error_email_template</config>
+        </currency_import_error_email_template>
+        <sitemap_generate_error_email_template>
+            <config>sitemap/generate/error_email_template</config>
+        </sitemap_generate_error_email_template>
+
+        <!-- Share -->
+        <sendfriend_email_template>
+            <config>sendfriend/email/template</config>
+        </sendfriend_email_template>
+        <wishlist_email_email_template>
+            <config>wishlist/email/email_template</config>
+            <customer>1</customer>
+        </wishlist_email_email_template>
+
+        <!-- Others -->
+        <contacts_email_email_template>
+            <config>contacts/email/email_template</config>
+        </contacts_email_email_template>
+        <oauth_email_template>
+            <config>oauth/email/template</config>
+        </oauth_email_template>
+
+    </templates>
+</config>

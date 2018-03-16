@@ -1,0 +1,74 @@
+
+.mail-preview #email-form {
+    display: flex;
+    justify-content: flex-start;
+
+}
+.mail-preview .step-1 {
+    display: inline-block;
+    background-color: #394264;
+    color: #fff;
+    padding:20px;
+    width:20%;
+}
+.mail-preview .banner {
+    background-color: #394264;
+    color: #fff;
+    padding:20px;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:5px;
+    box-sizing: border-box;
+}
+.mail-preview .icon {
+    width:35px;
+}
+.mail-preview .icon-container {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.mail-preview .preview {
+    width:80%;
+}
+.mail-preview h3 {
+    display: block;
+    font-size: 1.3rem;
+    color: #fff;
+}
+.mail-preview .step {
+    padding-bottom:20px;
+    margin-bottom:20px;
+    border-bottom:1px solid #11a8ab;
+}
+.mail-preview .step:last-child{
+    border-bottom:none;
+    padding-bottom:0;
+    margin-bottom:0;
+}
+
+.mail-preview select {
+    width:100%;
+
+}
+.mail-preview #generate {
+    width:100%;
+    padding:10px 5px;
+    font-size:1.1rem;
+    color: white;
+    background: #e64c65;
+
+}
+.mail-preview .preview {
+    padding:0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mail-preview .loader {
+    display: none;
+}
+.mail-preview .loader.loading {
+    display: inline-block;
+}
